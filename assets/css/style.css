@@ -271,59 +271,76 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
 .single-about-add-info p {font-weight:  300;border:  0;padding: 0;margin-top: 3px;}
 /*.single-about-txt*/
 
-/*.single-about-img */
+/* Container for the image */
+.single-about-img {
+    position: relative;
+    width: 100%;
+    max-width: 300px; /* Adjust image container size */
+    margin: 0 auto; /* Centering */
+}
 
-.single-about-img:before {
-    position:  absolute;
-    content: " ";
-    top: 0;
-    left:  0;
-    width:77%;
-    height:  100%;
-    /* background: rgba(31,44,108,.3); */
-}
+/* Image settings */
 .single-about-img img {
-    max-width: auto;
-    height: 468px;
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Decrease image size */
+    display: block;
+    border-radius: 10px;
 }
-.about-list-icon{
+
+/* Social media icons container */
+.about-list-icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 77%;
-    height: 90px;
-    background: #1f2c6c;
+    position: relative; /* Change from absolute to relative */
+    width: 100%;
+    max-width: 300px; /* Match image width */
+    height: 80px;
+    background: #ca2ce6d7;
+    margin-top: 20px; /* Space between image and icons */
+    border-radius: 10px;
 }
-/*.ab-list-icon */
+
+/* Social media icons list */
 .about-list-icon ul {
     display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
-.about-list-icon  ul li a {
-    padding-right: 22px;
-    cursor:pointer;
-    color: #fff;
+
+/* Styling for each social media icon */
+.about-list-icon ul li {
+    margin: 0 10px;
 }
+
 .about-list-icon ul li a {
     cursor: pointer;
     color: #fff;
-    display: inline-block;
-    border: 2px solid;
-    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #fff;
     border-radius: 8px;
-    width: 30px;
-    height: 30px;
-    line-height: 28px;
+    width: 35px;
+    height: 35px;
     text-align: center;
+    transition: all 0.3s ease-in-out;
 }
-.about-list-icon ul li a i {
-    margin-left: 6px;
-}
-/*.ab-list-icon */
 
-/*.single-about-img */
+/* Hover effect for social media icons */
+.about-list-icon ul li a:hover {
+    background: #fff;
+    color: #c6242d;
+}
+
+/* Adjust icon position inside the button */
+.about-list-icon ul li a i {
+    margin: 0;
+    font-size: 16px;
+}
+
 
 /*-------------------------------------
         5.  Education
@@ -853,4 +870,4 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     0%   {bottom:0px;}
     100%  {bottom:7px;}
 }
-/*========================Thank you=================
+/*========================Thank you=================*/
